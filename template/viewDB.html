@@ -1,12 +1,27 @@
 {% extends 'headerPage.html' %}
 
 {% block content%}
+<table>
+    <tr>
+        <td>
+            {% for i in listofImagesPath %}
 
-{% for i in listofImagesPath %}
+            <img src={{i}} style="width: 100px;"> <br>
+             
+            
+            {% endfor%}
+        </td>
+        <td>
+            {% for image in images %}
+        
+            <h4>{{image.pathh}} </h4>
+            <h4>{{image.des}} </h4>
+             
+            
+            {% endfor%}
+        </td>
+    </tr>
 
-<img src={{i}} style="width: 100px;"> <br>
 
-{% endfor%}
-
-
+</table>
 {% endblock %}
